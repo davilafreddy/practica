@@ -1,0 +1,167 @@
+$alto-btn: 8vmin;
+$ancho-btn: 9vmin;
+$alto-raya: 1vmin;
+$espacio-raya: $alto-raya * 2.2;
+
+@mixin abre-menu($moverX,$tiempo,$escalar){
+	 .menu_nav{
+	 			transform: translateX($moverX);
+	 }
+}
+
+.menu_container{
+	 position: fixed;
+	 top:0;
+  width: 100%;
+  height: $alto-menu;
+  z-index: 999;
+  background-color: $color-fondo1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+   .menu_nav{
+	  .menu{
+			  	display:flex;
+			  flex-wrap: nowrap;
+			  justify-content: flex-end;
+			  align-items: center;
+			  
+			  .menu_item{
+			  	font-family: 'font1', sans serif;
+			  	font-size: 1em;
+	  			flex-grow: 0;
+	  			padding-right: 2vmin;
+	  			padding-left: 2vmin;
+	  			display: flex; 
+	  			align-items: center;
+	  	/*		background-color:rgba(255,255,255,0.3);*/
+	  			height:4vmax;
+	  			cursor: pointer;
+	  			
+	 			 }//menu_item
+    } //menu
+   } //menu_nav
+  
+  
+  .menu_logo{
+  			margin-left: 0;
+  			display:flex;
+  			justify-content: flex-init;
+  			align-items:center;
+  			background: $logo-blanco no-repeat center left;
+  			background-size: contain;
+  			height: 100%;
+  			width: 30vmax;
+  }
+  .menu_celular{
+  	   
+  			.btn_menu{
+  					width:$ancho_btn;
+  	 		  height:$alto_btn;
+  	 		  margin-left:auto;
+  	 		  margin-right:auto;
+  	  		 position:relative;
+  	  		 display:flex;
+  					justify-content: center;
+  					align-items:center;
+  					margin-right:3vmin;
+  					cursor:pointer;
+  			
+  					.raya_btn{
+  						width:$alto-btn;
+  						height:$alto-raya;
+  						background-color:white;
+  						position:relative;
+  						border-radius:$alto-raya / 2;
+  				
+  						&:before, &:after{
+  							content:'';
+  							display:block;
+  							width:$alto_btn;
+  							height:$alto-raya;
+  							background-color:white;
+  							position:absolute;
+  							border-radius:$alto-raya / 2;
+  							top: -($espacio-raya);
+  							transition: transform .2s;
+  						}
+  						&:after{
+  								top: $espacio-raya;
+  						}
+  					}
+  					.toggle_menu{
+  						display:none;
+  					}
+  					
+  					.toggle_menu:checked + .raya_btn{
+  						height:0;
+  						&:before{
+  							transition: transform .2s;
+  							top:0;
+  							transform: rotate(45deg);
+  						}
+  						&:after{
+  							transition: transform .2s;
+  							top:0;
+  					 transform: rotate(-45deg);
+  						}
+  					}
+  			}
+  }
+}
+
+@include celular{
+	body{
+		//	background-color:red;
+	}
+	.menu_nav{
+		position:absolute;
+		width:100%;
+		height: auto;
+		top:$alto-menu;
+		background-color: #00538C;
+	  padding-bottom: 4vmin;
+		transition: transform .5s;
+		transform: translateX(100%);
+		z-index:-1;
+	/*	display:none;*/
+	 &--mostrar{
+	 	  transition: transform .5s;
+	   	transform: translateX(0%);
+	 }
+		.menu{
+			padding-top: 2vmin;
+		 flex-direction: column;
+	  	align-items: center;
+			justify-content: center;
+			.menu_item{
+				 padding-top:2vmin;
+				 &:before, &:after{
+				 		display:block;
+				 		content:'{';
+				 		padding-right: 1vmin;
+				 }
+				 &:after{
+				 	 padding-left: 1vmin;
+				 	 content:'}';
+				 }
+			}//menu_item
+		}//menu
+	}//menu_nav
+}
+@include tablet{
+	body{
+			background-color:violet;
+	}
+	.menu_celular{
+		display:none;
+	}
+}
+@include desktop{
+	body{
+			background-color:green;
+	}
+	.menu_celular{
+		display:none;
+	}
+}

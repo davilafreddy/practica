@@ -1,0 +1,413 @@
+$ancho_marco: .6rem;
+
+.recepcion{
+	width: 100vw;
+	height: 40vh;
+	position: relative;
+	overflow: hidden;
+	margin: 0;
+	background-color: white;
+	display:flex;
+	justify-content: center;
+
+	.contenedor_recepcion{
+    position:absolute;
+		width:100%;
+		height:100%;
+		top:0;
+		left:0;
+		.recepcion_img{
+			width:100%;
+			height:100%;
+	  	object-fit: cover;
+			object-position: bottom;
+	    animation: entraPuerta2 .5s linear 2s 1 forwards;
+  	}
+	}
+	.contenedor_puerta{
+    position:relative;
+		width:100%;
+		height:100%;
+		top:0;
+		left:0;
+	  animation: entraPuerta .5s linear 2s 1 forwards;
+
+		.marco_izquierdo{
+      position:absolute;
+			top:0;
+			left:0;
+			width:$ancho_marco;
+			height:100%;
+background-image: linear-gradient( to right,  rgba(195,201,201,1) 15.6%, rgba(241,239,239,1) 39.5%, rgba(163,169,175,1) 49.4%, rgba(202,202,202,1) 84.5%, rgba(202,206,206,1) 100% );
+		}
+
+		.marco_derecho{
+      position:absolute;
+			top:0;
+			right:0;
+			width:$ancho_marco;
+			height:100%;
+background-image: linear-gradient( to left,  rgba(195,201,201,1) 15.6%, rgba(241,239,239,1) 39.5%, rgba(163,169,175,1) 49.4%, rgba(202,202,202,1) 84.5%, rgba(202,206,206,1) 100% );
+		}
+	.marco_arriba{
+      position:absolute;
+			top:0;
+			left:.3rem;
+			right:.3rem;
+			width:auto;
+			height:$ancho_marco;
+background-image: linear-gradient( to bottom,  rgba(195,201,201,1) 15.6%, rgba(241,239,239,1) 39.5%, rgba(163,169,175,1) 49.4%, rgba(202,202,202,1) 84.5%, rgba(202,206,206,1) 100% );
+		}/*marco_arriba*/
+	  
+		.puerta_izquierda{
+      position:absolute;
+			top: $ancho_marco;
+			left: $ancho_marco;
+			width: calc(50% - #{$ancho_marco + .2rem});
+			height: calc(100% - #{$ancho_marco +  .2rem});
+			background-image: radial-gradient( circle 186px at -1.7% -3.6%,  rgba(153,153,153,1) 0%, rgba(238,238,238,1) 100.7% );
+			border-left: .1rem solid #f1efef;
+			border-top: .1rem solid #f1efef;
+			border-bottom: .1rem solid #393939;
+			border-right: .1rem solid silver;
+			animation: abrePuerta1 2s linear 1 forwards;
+
+      .adorno_puerta1{
+        position: relative;
+				width: 35vw;
+				height:19vh;
+				margin: 5vw auto;
+				background-color: transparent;
+
+				.adorno_puerta1_borde1{   
+					border-radius:2px;
+			    position:absolute;
+					width:100%;
+			    height:.3rem;
+					top:0;
+					left:0;	
+          background-image: linear-gradient( 179deg,  rgba(195,201,201,1) 15.6%, #d8d8d8 39.5%, rgba(163,169,175,1) 49.4%, #eeeeee 100% );			
+	      }//adorno_puerta1_borde1
+				.adorno_puerta1_borde2{
+					border-radius: 2px;
+			    position:absolute;
+					width:.2rem;
+			    height:auto;
+					right:0;
+					top:.1rem;
+					bottom:.2rem;
+          background-image: linear-gradient( to right,  rgba(195,201,201,1) 15.6%, rgba(163,169,175,1) 100% );
+				}//adorno_puerta1_borde2
+				.adorno_puerta1_borde3{
+					border-radius:2px;
+			    position:absolute;
+					width:auto;
+			    height:.3rem;
+					right:0;
+					left:.2rem;
+					bottom:0;
+          background-image: linear-gradient( to bottom,  rgba(195,201,201,1) 15.6%, rgba(163,169,175,1) 49.4%, rgba(202,202,202,1) 100% );
+				}//adorno_puerta1_borde3
+				.adorno_puerta1_borde4{
+					border-radius:2px;
+			    position:absolute;
+					width:.3rem;
+			    height:auto;
+					top:.2rem;
+					left:0;
+					bottom:0;
+          background-image: linear-gradient( to right,  rgba(195,201,201,1) 15.6%, rgba(241,239,239,1) 39.5%, rgba(163,169,175,1) 49.4%, rgba(202,202,202,1) 100% );
+				}//adorno_puerta1_borde4
+			}//adorno_puerta1
+			.adorno_puerta2{
+        position: relative;
+				width: 35vw;
+				height:8vh;
+				margin: 5vw auto;
+				background-color: transparent;
+
+				.adorno_puerta2_borde1{   
+					border-radius:2px;
+			    position:absolute;
+					width:100%;
+			    height:.3rem;
+					top:0;
+					left:0;	
+          background-image: linear-gradient( to bottom,  #d8d8d8 49.6%, #c3c9c9 100% );	
+	      }//adorno_puerta2_borde1
+				.adorno_puerta2_borde2{   
+					border-radius:2px;
+			    position:absolute;
+					width:.3rem;
+			    height:auto;
+					top:.2rem;
+					right:0;
+					bottom:0;
+          background-image: linear-gradient( to left,  #d8d8d8 49.6%, #c3c9c9 100% );	
+	      }//adorno_puerta2_borde2
+				.adorno_puerta2_borde3{   
+			    position:absolute;
+					width:auto;
+			    height:.2rem;
+					bottom:0;
+					left:0;	
+					right:.25rem;
+          background-image: linear-gradient( to bottom,  #e8e8e8 49.6%, #c3c9c9 100% );	
+	      }//adorno_puerta2_borde3
+				.adorno_puerta2_borde4{
+			    position:absolute;
+					width:.2rem;
+			    height:auto;
+					left:0;
+					top:0;
+					bottom:0;
+          background-image: linear-gradient( to left,  rgba(195,201,201,1) 49.6%, rgba(202,202,202,1) 100% );
+				}//adorno_puerta2_borde4
+			}//adorno_puerta2
+			.manilla{
+        position:absolute;
+				right: 1.5vw;
+				top:47%;
+				width:.6rem;
+				height: 2.5rem;
+				.manilla_pieza1{
+         position:absolute;
+				 top:0;
+				 left:0;
+				 width:.6rem;
+				 height:.6rem;
+				 background-color:#666666;
+				 border-radius:3px;
+				}//manilla_pieza1
+				.manilla_pieza2{
+         position:absolute;
+				 bottom:0;
+				 left:0;
+				 width:.6rem;
+				 height:.6rem;
+				 background-color:#666666;
+				 border-radius:3px;
+				}//manilla_pieza2
+				.manilla_pieza3{
+         position:absolute;
+				 top:.3rem;
+				 left:0;
+				 width:.6rem;
+				 height:.3rem;
+				 background-image: radial-gradient( circle .3rem at 46.6% 48.6%,  rgba(255,255,255,1) 0.3%, rgba(154,160,165,1) 77.3%, rgba(134,134,134,1) 98.5% );
+				 border-radius:3px;
+				}//manilla_pieza3
+				.manilla_pieza4{
+         position:absolute;
+				 bottom:.3rem;
+				 left:0;
+				 width:.6rem;
+				 height:.3rem;
+				 background-image: radial-gradient( circle .3rem at 46.6% 48.6%,  rgba(255,255,255,1) 0.3%, rgba(154,160,165,1) 77.3%, rgba(134,134,134,1) 98.5% );
+				 border-radius:3px;
+				}//manilla_pieza4
+				.manilla_pieza5{
+         position:absolute;
+				 bottom:.6rem;
+				 top:.6rem;
+				 left:.2rem;
+				 width:.2rem;
+				 height:auto;
+				 background-image: linear-gradient( 103.6deg,  rgba(213,213,213,1) 10.4%, rgba(134,134,134,1) 100.6% );
+				}//manilla_pieza5
+			}//manilla
+		}//puerta_izquierda
+	
+		.puerta_derecha{
+      position:absolute;
+			top: $ancho_marco;
+			right: $ancho_marco;
+			width: calc(50% - #{$ancho_marco + .2rem});
+			height: calc(100% - #{$ancho_marco +  .2rem});
+			background-image: radial-gradient( circle 186px at 101.7% 3.6%,  rgba(153,153,153,1) 0%, rgba(238,238,238,1) 100.7% );
+			border-right: .1rem solid #f1efef;
+			border-top: .1rem solid #f1efef;
+			border-bottom: .1rem solid #393939;
+			border-left: .1rem solid silver;
+			animation: abrePuerta2 2s linear 1 forwards;
+
+      .adorno2_puerta1{
+        position: relative;
+				width: 35vw;
+				height:19vh;
+				margin: 5vw auto;
+				background-color: transparent;
+
+				.adorno2_puerta1_borde1{   
+					border-radius:2px;
+			    position:absolute;
+					width:100%;
+			    height:.3rem;
+					top:0;
+					left:0;	
+          background-image: linear-gradient( 1deg,  rgba(195,201,201,1) 15.6%, #d8d8d8 39.5%, rgba(163,169,175,1) 49.4%, #eeeeee 100% );			
+	      }//adorno2_puerta1_borde1
+				.adorno2_puerta1_borde4{
+					border-radius: 2px;
+			    position:absolute;
+					width:.2rem;
+			    height:auto;
+					left:0;
+					top:.1rem;
+					bottom:.2rem;
+          background-image: linear-gradient( to left,  rgba(195,201,201,1) 15.6%, rgba(163,169,175,1) 100% );
+				}//adorno2_puerta1_borde4
+				.adorno2_puerta1_borde3{
+					border-radius:2px;
+			    position:absolute;
+					width:auto;
+			    height:.3rem;
+					right:0;
+					left:0;
+					bottom:0;
+          background-image: linear-gradient( to bottom,  rgba(195,201,201,1) 15.6%, rgba(163,169,175,1) 49.4%, rgba(202,202,202,1) 100% );
+				}//adorno2_puerta1_borde3
+				.adorno2_puerta1_borde2{
+					border-radius:2px;
+			    position:absolute;
+					width:.3rem;
+			    height:auto;
+					top:.1rem;
+					right:0;
+					bottom:0;
+          background-image: linear-gradient( to left,  rgba(195,201,201,1) 15.6%, rgba(241,239,239,1) 39.5%, rgba(163,169,175,1) 49.4%, rgba(202,202,202,1) 100% );
+				}//adorno2_puerta1_borde2
+			}//adorno2_puerta1
+			.adorno2_puerta2{
+        position: relative;
+				width: 35vw;
+				height:8vh;
+				margin: 5vw auto;
+				background-color: transparent;
+
+				.adorno2_puerta2_borde1{   
+					border-radius:2px;
+			    position:absolute;
+					width:100%;
+			    height:.3rem;
+					top:0;
+					left:0;	
+          background-image: linear-gradient( to bottom,  #d8d8d8 49.6%, #c3c9c9 100% );	
+	      }//adorno2_puerta2_borde1
+				.adorno2_puerta2_borde4{   
+					border-radius:2px;
+			    position:absolute;
+					width:.3rem;
+			    height:auto;
+					top:.2rem;
+					left:0;
+					bottom:0;
+          background-image: linear-gradient( to right,  #d8d8d8 49.6%, #c3c9c9 100% );	
+	      }//adorno2_puerta2_borde4
+				.adorno2_puerta2_borde3{   
+			    position:absolute;
+					width:auto;
+			    height:.2rem;
+					bottom:0;
+					left:0;	
+					right:.25rem;
+          background-image: linear-gradient( to bottom,  #e8e8e8 49.6%, #c3c9c9 100% );	
+	      }//adorno2_puerta2_borde3
+				.adorno2_puerta2_borde2{
+			    position:absolute;
+					width:.2rem;
+			    height:auto;
+					right:0;
+					top:0;
+					bottom:0;
+          background-image: linear-gradient( to right,  rgba(195,201,201,1) 49.6%, rgba(202,202,202,1) 100% );
+				}//adorno2_puerta2_borde2
+			}//adorno2_puerta2
+			.manilla_derecha{
+        position:absolute;
+				left: 1.5vw;
+				top:47%;
+				width:.6rem;
+				height: 2.5rem;
+				.manilla2_pieza1{
+         position:absolute;
+				 top:0;
+				 left:0;
+				 width:.6rem;
+				 height:.6rem;
+				 background-color:#666666;
+				 border-radius:3px;
+				}//manilla2_pieza1
+				.manilla2_pieza2{
+         position:absolute;
+				 bottom:0;
+				 left:0;
+				 width:.6rem;
+				 height:.6rem;
+				 background-color:#666666;
+				 border-radius:3px;
+				}//manilla2_pieza2
+				.manilla2_pieza3{
+         position:absolute;
+				 top:.3rem;
+				 left:0;
+				 width:.6rem;
+				 height:.3rem;
+				 background-image: radial-gradient( circle .3rem at 46.6% 48.6%,  rgba(255,255,255,1) 0.3%, rgba(154,160,165,1) 77.3%, rgba(134,134,134,1) 98.5% );
+				 border-radius:3px;
+				}//manilla2_pieza3
+				.manilla2_pieza4{
+         position:absolute;
+				 bottom:.3rem;
+				 left:0;
+				 width:.6rem;
+				 height:.3rem;
+				 background-image: radial-gradient( circle .3rem at 46.6% 48.6%,  rgba(255,255,255,1) 0.3%, rgba(154,160,165,1) 77.3%, rgba(134,134,134,1) 98.5% );
+				 border-radius:3px;
+				}//manilla2_pieza4
+				.manilla2_pieza5{
+         position:absolute;
+				 bottom:.6rem;
+				 top:.6rem;
+				 left:.2rem;
+				 width:.2rem;
+				 height:auto;
+				 background-image: linear-gradient( 103.6deg,  rgba(213,213,213,1) 10.4%, rgba(134,134,134,1) 100.6% );
+				}//manilla2_pieza5
+			}//manilla_derecha
+		}//puerta_derecha
+	}/*contenedor_puerta*/
+}/*recepcion*/
+
+@keyframes abrePuerta1{
+   0%{
+    left: $ancho_marco;
+	 }
+	 100%{
+    left:-50%;
+	 }
+}
+@keyframes abrePuerta2{
+   0%{
+    right: $ancho_marco;
+	 }
+	 100%{
+    right:-50%;
+	 }
+}
+@keyframes entraPuerta{
+   0%{
+		 transform: scale(1);
+	 }
+	 100%{
+		 transform: scale(1.5);
+	 }
+}
+@keyframes entraPuerta2{
+   0%{
+		 transform: scale(1);
+	 }
+	 100%{
+		 transform: scale(1.1);
+	 }
+}
