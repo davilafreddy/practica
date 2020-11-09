@@ -66,14 +66,18 @@
 	 	</div><!--slide2-->
 	 	</div><!--slider__images-->
 </section><!--slider-->
-<section class="recepcion">
-	<div class="contenedor_recepcion">
+<section id="relleno">
+	<span id="posicion">Posiciones: </span></br>
+  		Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+</section><!--section relleno-->
+<section class="recepcion" id="recepcion">
+	<div class="contenedor_recepcion" id="contenedor_recepcion">
 	 	<img src="assets/img/recepcion/recepcion2.jpg" class="recepcion_img" />
 	</div><!--contenedor_recepcion-->
 	
-	<div class="contenedor_puerta">
+	<div class="contenedor_puerta" id="contenedor_puerta">
 
-		<div class="puerta_izquierda">     
+		<div class="puerta_izquierda" id="puerta_izquierda">     
   		<div class="adorno_puerta1">       
   		<div class="adorno_puerta1_borde1">
 			</div>
@@ -108,7 +112,7 @@
 		  	 </div>
 			 </div>
 		</div><!--puerta_izquierda1-->
-		<div class="puerta_derecha">     
+		<div class="puerta_derecha" id="puerta_derecha">     
   		<div class="adorno2_puerta1">       
   		<div class="adorno2_puerta1_borde1">
 			</div>
@@ -131,15 +135,15 @@
 			 </div>
 			</div><!--adorno2_puerta2-->
   		 <div class="manilla_derecha">
-  	  	 <div class="manilla_pieza1">
+  	  	 <div class="manilla2_pieza1">
 		  	 </div>
-  	  	 <div class="manilla_pieza2">
+  	  	 <div class="manilla2_pieza2">
 		  	 </div>
-  	  	 <div class="manilla_pieza3">
+  	  	 <div class="manilla2_pieza3">
 		  	 </div>
-  	  	 <div class="manilla_pieza4">
+  	  	 <div class="manilla2_pieza4">
 		  	 </div>
-  	  	 <div class="manilla_pieza5">
+  	  	 <div class="manilla2_pieza5">
 		  	 </div>
 			 </div>
 		</div><!--puerta_derecha-->

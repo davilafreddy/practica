@@ -21,7 +21,6 @@ $ancho_marco: .6rem;
 			height:100%;
 	  	object-fit: cover;
 			object-position: bottom;
-	    animation: entraPuerta2 .5s linear 2s 1 forwards;
   	}
 	}
 	.contenedor_puerta{
@@ -30,7 +29,6 @@ $ancho_marco: .6rem;
 		height:100%;
 		top:0;
 		left:0;
-	  animation: entraPuerta .5s linear 2s 1 forwards;
 
 		.marco_izquierdo{
       position:absolute;
@@ -70,7 +68,6 @@ background-image: linear-gradient( to bottom,  rgba(195,201,201,1) 15.6%, rgba(2
 			border-top: .1rem solid #f1efef;
 			border-bottom: .1rem solid #393939;
 			border-right: .1rem solid silver;
-			animation: abrePuerta1 2s linear 1 forwards;
 
       .adorno_puerta1{
         position: relative;
@@ -229,7 +226,6 @@ background-image: linear-gradient( to bottom,  rgba(195,201,201,1) 15.6%, rgba(2
 			border-top: .1rem solid #f1efef;
 			border-bottom: .1rem solid #393939;
 			border-left: .1rem solid silver;
-			animation: abrePuerta2 2s linear 1 forwards;
 
       .adorno2_puerta1{
         position: relative;
@@ -379,6 +375,18 @@ background-image: linear-gradient( to bottom,  rgba(195,201,201,1) 15.6%, rgba(2
 	}/*contenedor_puerta*/
 }/*recepcion*/
 
+.abrePuertaIzq{
+			  animation: abrePuerta1 2s linear 1 forwards;
+}
+.abrePuertaDer{
+			  animation: abrePuerta2 2s linear 1 forwards;
+}
+.entrando2{
+	animation: entraPuerta2 .5s linear 2s 1 forwards;
+}
+.entrando1{
+	 animation: entraPuerta .5s linear 2s 1 forwards;
+}
 @keyframes abrePuerta1{
    0%{
     left: $ancho_marco;
