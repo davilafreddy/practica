@@ -3,3 +3,4 @@
 @import "responsive";
 @import "menu";
 @import "slider";
+@import "recepcion";

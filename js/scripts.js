@@ -47,7 +47,7 @@ window.addEventListener('scroll', function() {
 
 	let textoPosicion = document.getElementById("posicion")
 
-	textoPosicion.textContent = "Posiciones: recepcion="+posRecepcion+"px -  Alto pantalla: "+altoPantalla+"px - Tope actual="+topPantalla+"px - alto recepcion: "+altoRecepcion+"px"
+//	textoPosicion.textContent = "Posiciones: recepcion="+posRecepcion+"px -  Alto pantalla: "+altoPantalla+"px - Tope actual="+topPantalla+"px - alto recepcion: "+altoRecepcion+"px"
  
 //console.log(window.pageYOffset + 'px');
 });

@@ -31,10 +31,10 @@ window.addEventListener('scroll', function() {
 	
 	if((topPantalla >= scrollRecepcion) && (!pasaRecepcion)){
 		console.log(contenedorRecepcion)
-  /*contenedorRecepcion.classList.add("entrando2")
+    contenedorRecepcion.classList.add("entrando2")
 		contenedorPuerta.classList.add("entrando1")
 		puertaIzquierda.classList.add("abrePuertaIzq")
-		puertaDerecha.classList.add("abrePuertaDer")*/
+		puertaDerecha.classList.add("abrePuertaDer")
 		
 			console.log("entra puerta")
 		pasaRecepcion = true
@@ -47,7 +47,7 @@ window.addEventListener('scroll', function() {
 
 	let textoPosicion = document.getElementById("posicion")
 
-	textoPosicion.textContent = "Posiciones: recepcion="+posRecepcion+"px -  Alto pantalla: "+altoPantalla+"px - Tope actual="+topPantalla+"px - alto recepcion: "+altoRecepcion+"px"
+//	textoPosicion.textContent = "Posiciones: recepcion="+posRecepcion+"px -  Alto pantalla: "+altoPantalla+"px - Tope actual="+topPantalla+"px - alto recepcion: "+altoRecepcion+"px"
  
 //console.log(window.pageYOffset + 'px');
 });
